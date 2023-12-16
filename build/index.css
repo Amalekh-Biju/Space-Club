@@ -153,7 +153,7 @@ body {
 	color: transparent;
 	-webkit-text-stroke-width: 1.5px;
 	-webkit-text-stroke-color: #000;
-	-webkit-text-size-adjust: 350%;
+	-webkit-text-size-adjust: 350% !important;
 }
 .container ul li p {
 	opacity: 0;
@@ -219,7 +219,7 @@ body {
 	}
 }
 
-@media screen and (max-width: 1080px) {
+@media screen and (max-width: 1100px) {
 	.container {
 		min-width: 10%;
 		  width: 100%;
