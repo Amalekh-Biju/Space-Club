@@ -261,6 +261,7 @@ body {
 		color: transparent;
 		-webkit-text-stroke-width: 4px;
 		-webkit-text-stroke-color: #000;
+		text-size-adjust: 200%;
 	}
 	.container ul li p {
 		opacity: 0;
