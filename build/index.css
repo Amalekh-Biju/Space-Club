@@ -101,14 +101,12 @@ body {
 }
 #title > h1 {
 	margin-bottom: 50px;
-	font-family: 'Roboto Mono', monospace;
-	font-family: 'Varela Round', sans-serif;
-	color: #fff;
-	position: relative;
-	background: linear-gradient(-90deg, #9a52a0, #FFF);
-	background-size: 200% auto;
-	-webkit-background-clip: text;
-	-webkit-text-fill-color: transparent;
+	color: #FFF;
+	font-family: GRIFTER;
+	font-size: 64px;
+	font-style: normal;
+	font-weight: 700;
+	line-height: normal;
 	animation: movingBack 1s cubic-bezier(0.075, 0.1, 0.78, 1) 0.1s backwards,
 		changeBack 1s ease-in-out 1.7s;
 }
