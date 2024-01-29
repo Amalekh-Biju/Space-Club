@@ -14,7 +14,7 @@ const clear = (el) => {
 		i.className = '';
 	}
 };
-const navElements = ['home', 'likes', 'search', 'user'];
+const navElements = ['home', 'article', 'search', 'user'];
 
 
 
@@ -39,8 +39,8 @@ useEffect(() => {
 					<p>Home</p>
 				</li>
 				<li>
-					<i class="fa fa-heart"></i>
-					<p>Likes</p>
+				<i class="fa fa-newspaper"></i>
+					<p>Articles</p>
 				</li>
 				<li>
 					<i class="fa fa-search"></i>
