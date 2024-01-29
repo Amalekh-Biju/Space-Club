@@ -3,7 +3,8 @@
 
 html {
   height: 100%;
-  overflow: hidden;
+  display: flex;
+  flex-direction: column;
 }
 
 #stars {
@@ -58,6 +59,7 @@ html {
 }
 
 #title {
+
   position: absolute;
   left: 0;
   right: 0;
@@ -126,3 +128,30 @@ body {
 		background-position: -200% center;
 	}
 }
+
+.Home button{
+    border: 0;
+    border-radius: 20px;
+    padding: 12px 30px;
+    margin-top: 30px;
+    cursor: pointer;
+    color: #FFF;
+    background-color: #2a2f6b;
+    position: absolute;
+    top: 60%;
+    left: 45%;
+    width: 10%;
+}
+
+a {
+  text-decoration: none;
+  }
+
+  a:link, a:visited {
+  text-decoration: none;
+  }
+
+  #aim > h1,p{
+    color: #FFF;
+    display: flex;
+  }
