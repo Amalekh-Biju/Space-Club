@@ -1,110 +1,57 @@
-/* Start Global Rules */
-.nav {
-    .container {
-        min-width: 10%;
-          width: 25%;
-          height: 10%;
-          background-color: #fff;
-          border-radius: 25px;
-        bottom: 3%;
-        position:fixed;
-        left: 37.5%;
-        right: auto;
-            margin: 0;
-            padding: 0;
-    
-        }
-        .container ul {
-            width: 100%;
-            height: 100%;
-            list-style: none;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-        .container ul li {
-            display: inline-flex;
-            align-items: center;
-            overflow: hidden;
-            justify-content: center;
-            cursor: pointer;
-            text-align: center;
-            padding: 15px 5px;
-            margin: 15px;
-            margin-right: 7.5px;
-            margin-left: 7.5px;
-            border-radius: 40px;
-            font-family: 'Roboto Mono', monospace;
-            font-family: 'Varela Round', sans-serif;
-            transition: all 0.4s ease-in-out;
-        }
-        .container ul li i {
-            color: transparent;
-            -webkit-text-stroke-width: 1.5px;
-            -webkit-text-stroke-color: #000;
-        }
-        .container ul li p {
-            opacity: 0;
-            transition: all 0.4s ease-in-out;
-            font-size: 14px;
-            margin-left: 10px;
-        }
-        .active {
-            padding-left: 25px !important;
-            padding-right: 25px !important;
-        }
-        .active p {
-            opacity: 1 !important;
-        }
-        .home {
-            background-color: hsla(256, 54%, 47%, 0.2);
-        }
-        .home i {
-            -webkit-text-stroke-color: hsl(256, 54%, 47%) !important;
-        }
-        .home p {
-            color: hsl(256, 54%, 47%);
-        }
-        .article {
-            background-color: hsla(256, 54%, 47%, 0.2);
-        }
-        .article i {
-            -webkit-text-stroke-color: hsl(256, 54%, 47%) !important;
-        }
-        .article p {
-            color: hsl(256, 54%, 47%) !important;
-        }
-        .search {
-            background-color: hsla(256, 54%, 47%, 0.2);
-        }
-        .search i {
-        -webkit-text-stroke-color: hsl(256, 54%, 47%) !important;
-        }
-        .search p {
-        color: hsl(256, 54%, 47%) !important;
-        }
-        .user {
-            background-color: hsla(256, 54%, 47%, 0.2);
-        }
-        .user i {
-            -webkit-text-stroke-color: hsl(256, 54%, 47%) !important;
-        }
-        .user p {
-        color: hsl(256, 54%, 47%) !important;
-        }
-        
-        @keyframes movingBack {
-            from {
-                transform: translate(-200%, 0);
-            }
-            to {
-                transform: translate(0, 0);
-            }
-        }
-        @keyframes changeBack {
-            to {
-                background-position: -200% center;
-            }
-        }
-        
-    }
+@import url('https://fonts.googleapis.com/css2?family=Anek+Malayalam&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto+Slab:wght@100..900&display=swap');
+
+nav{
+    background:#fff;
+    width:max-content;
+    display: block;
+    padding: 0.7rem 1.7rem;
+    z-index: 2;
+    position: fixed;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 2rem;
+    display: flex;
+    gap: 0.8rem;
+    border-radius: 3rem;
+    backdrop-filter: blur(15px);
+    transition: 30ms ease-in-out;
+}
+
+nav a{
+    background: transparent;
+    padding: 1rem 1.5rem ;
+    border-radius: 30px;
+    display: flex;
+    color:#000000;
+    font-size: 1.1rem;
+    transition: 0.5s ease-in-out;
+}
+
+nav a:hover{
+    background: rgba(0,0,0,0.3);
+}
+
+nav a.active{
+    background: #000000;
+    color: #ffffff;
+}
+ nav p{
+    margin-left: 10px;
+    font-size: 20px;
+    color: #ffffff;
+    display: none;
+    font-family: "Roboto Slab", sans-serif;
+    font-optical-sizing: 0;
+    font-weight: 340;
+    font-style: normal;
+    transition: 3ms ease-in-out;
+ }
+
+ nav a.active p{
+    display: block;
+    transition: all 3ms ease-in-out;
+ }
+ nav .icon{
+    margin-top: 4px;
+ }
