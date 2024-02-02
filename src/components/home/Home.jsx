@@ -17,7 +17,7 @@ const Home = () => {
 			<br/><br/>
 			<h1>Space Club MITS</h1>
 		</div>
-		<a href="#aim"><button>Read More</button></a>
+		<Link to="/solar" ><button>Solar Explorer</button></Link>
 	</div>
   )
 }

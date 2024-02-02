@@ -12,8 +12,12 @@ const Nav = () => {
     <nav>
       <Link to="/" onClick={() => setActiveNav('/')} className={activeNav === '/' ? 'active' : ''}><AiOutlineHome className='icon'/> <p>Home</p></Link>
       <Link to="/article" onClick={() => setActiveNav('/article')} className={activeNav === '/article' ? 'active' : ''}><AiOutlineUser className='icon'/><p>Articles</p></Link>
+<<<<<<< HEAD:src/components/nav/Nav.jsx
+      <Link to="/" onClick={() => setActiveNav('/')} className={activeNav === '/' ? 'active' : ''}><AiOutlineHome className='icon'/> <p>Home</p></Link>
+=======
       <Link to="/" onClick={() => setActiveNav('/')} className={activeNav === '/' ? 'active' : ''}><AiOutlineHome className='icon'/> <p>Calender</p></Link>
       <Link to="/solar" onClick={() => setActiveNav('/solar')} className={activeNav === '/solar' ? 'active' : ''}><AiOutlineHome className='icon'/> <p>Solar</p></Link>
+>>>>>>> refs/remotes/origin/main:Space-Club/src/components/nav/Nav.jsx
     </nav>
   )
 }
