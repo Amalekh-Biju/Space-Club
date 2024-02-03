@@ -2,11 +2,8 @@ import React from 'react'
 import { ReactDOM } from 'react';
 import './home.css';
 import { Link } from 'react-router-dom';
-import { useState } from 'react'
-import '../nav/nav.css'
 
 const Home = () => {
-  const [activeNav, setActiveNav]= useState('/solar')
   return (
 	<div class="Home">
 		 <div id='stars'></div>
@@ -20,7 +17,7 @@ const Home = () => {
 			<br/><br/>
 			<h1>Space Club MITS</h1>
 		</div>
-		<Link to="/solar" onClick={() => setActiveNav('/solar')} className={activeNav === '/solar' ? 'active' : ''}> <button>Solar Explorer</button></Link>
+		<a href="#aim"><button>Read More</button></a>
 	</div>
   )
 }

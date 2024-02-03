@@ -3,7 +3,6 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Home from './components/home/Home';
 import Article from './components/article/Article';
 import Nav from './components/nav/Nav';
-import Solar from './components/solar-system/Solar';
 
 const App = () => {
   return (
@@ -13,7 +12,6 @@ const App = () => {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/article" element={<Article />} />
-          <Route path="/solar" element={<Solar />} />
         </Routes>  
       </Router>
     </div>
