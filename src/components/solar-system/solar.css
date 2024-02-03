@@ -35,6 +35,21 @@ body .solar_systm .planet.neptune .trajectory.ner, body .solar_systm .planet.nep
   z-index: -2;
 }
 
+
+/* For tablets */
+@media (max-width: 768px) {
+  .solar_systm {
+    transform: scale(0.8);
+  }
+}
+
+/* For mobile phones */
+@media (max-width: 480px) {
+  .solar_systm {
+    transform: scale(0.6);
+  }
+}
+
 body .solar_systm .planet {
   height: 1200px;
   width: 1200px;
