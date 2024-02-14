@@ -124,7 +124,7 @@ body input[type=radio][name=planet]::after {
 }
 
 body {
-  overflow-x: hidden;
+  overflow: hidden;
   background: black;
   height: 100vh;
   font-family: "Montserrat", sans-serif;
