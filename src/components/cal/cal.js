@@ -119,7 +119,7 @@ function CalendarApp(date) {
       day.onclick = this.showDay.bind(this);
       
       // check if todays date
-      if ( z == today.getDate() && y == today.getFullYear() && m == today.getMonth() ) {
+      if ( z === today.getDate() && y === today.getFullYear() && m === today.getMonth() ) {
         day.classList.add("today");
       }
       
@@ -215,7 +215,7 @@ function CalendarApp(date) {
       li.className = "event-dates";
       // li.innerHtml
       var html = "<span class='start-time'>" + _start.toLocaleTimeString(navigator.language,{hour: '2-digit', minute:'2-digit'}) + "</span> <small>through</small> ";
-      html += "<span class='end-time'>" + _end.toLocaleTimeString(navigator.language,{hour: '2-digit', minute:'2-digit'}) + ( (_end.getDate() != _start.getDate()) ? ' <small>on ' + _end.toLocaleDateString() + "</small>" : '') +"</span>";
+      html += "<span class='end-time'>" + _end.toLocaleTimeString(navigator.language,{hour: '2-digit', minute:'2-digit'}) + ( (_end.getDate() !== _start.getDate()) ? ' <small>on ' + _end.toLocaleDateString() + "</small>" : '') +"</span>";
       
   
       html += "<span class='event-name'>" + event.name + "</span>";
@@ -272,7 +272,7 @@ function CalendarApp(date) {
   CalendarApp.prototype.showEventsByDay = function(day) {
     var _events = [];
     this.apts.forEach(function(apt, idx){
-      if ( day.toString() == apt.day.toString() ) {
+      if ( day.toString() === apt.day.toString() ) {
         apt.index = idx;
         _events.push(apt);
       }
@@ -284,7 +284,7 @@ function CalendarApp(date) {
     this.closeNewEventBox();
   };
   CalendarApp.prototype.mainCalendarClickClose = function(e){
-    if ( e.currentTarget != e.target ) {
+    if ( e.currentTarget !== e.target ) {
       return;
     }
     
@@ -299,7 +299,7 @@ function CalendarApp(date) {
   };
   CalendarApp.prototype.closeNewEventBox = function(e){
     
-    if (e && e.keyCode && e.keyCode != 13) return false;
+    if (e && e.keyCode && e.keyCode !== 13) return false;
     
     this.dayEventBoxEle.setAttribute("data-active", "false");
     // reset values
@@ -346,17 +346,17 @@ function CalendarApp(date) {
       hours = parseInt(hours);
       mins = 0;
     }
-    hours = ( AMPM == 'am' ) ? ( (hours == 12) ? 0 : hours ) : (hours <= 11) ? parseInt(hours) + 12 : hours;
+    hours = ( AMPM === 'am' ) ? ( (hours === 12) ? 0 : hours ) : (hours <= 11) ? parseInt(hours) + 12 : hours;
     return [hours, mins];
   };
   CalendarApp.prototype.cleanEventTimeStampDates = function() {
     
     var startTime = this.dayEventAddForm.startTime.value.trim() || this.dayEventAddForm.startTime.getAttribute("placeholder") || '8';
     var startAMPM = this.dayEventAddForm.startAMPM.value.trim() || this.dayEventAddForm.startAMPM.getAttribute("placeholder") || 'am';
-    startAMPM = (startAMPM == 'a') ? startAMPM + 'm' : startAMPM;
+    startAMPM = (startAMPM === 'a') ? startAMPM + 'm' : startAMPM;
     var endTime = this.dayEventAddForm.endTime.value.trim() || this.dayEventAddForm.endTime.getAttribute("placeholder") || '9';
     var endAMPM = this.dayEventAddForm.endAMPM.value.trim() || this.dayEventAddForm.endAMPM.getAttribute("placeholder") || 'pm';
-    endAMPM = (endAMPM == 'p') ? endAMPM + 'm' : endAMPM;
+    endAMPM = (endAMPM === 'p') ? endAMPM + 'm' : endAMPM;
     var date = this.dayEventBoxEle.getAttribute("data-date");
     
     var startingTimeStamps = this.convertTo23HourTime(startTime, startAMPM);
@@ -381,7 +381,7 @@ function CalendarApp(date) {
     var endTime = this.dayEventAddForm.endTime.value.trim();
     var endAMPM = this.dayEventAddForm.endAMPM.value.trim();
     
-    if (!name || name == null) {
+    if (!name || name === null) {
       _errors = true;
       this.dayEventAddForm.nameEvent.classList.add("add-event-edit--error");
       this.dayEventAddForm.nameEvent.focus();
@@ -389,7 +389,7 @@ function CalendarApp(date) {
        this.dayEventAddForm.nameEvent.classList.remove("add-event-edit--error");
     }
     
-  //   if (!startTime || startTime == null) {
+  //   if (!startTime || startTime === null) {
   //     _errors = true;
   //     this.dayEventAddForm.startTime.classList.add("add-event-edit--error");
   //   } else {
@@ -407,7 +407,7 @@ function CalendarApp(date) {
     if ( ele.currentTarget ) {
       ele = ele.currentTarget;
     }
-    if (timeOut && ele == activeEle){
+    if (timeOut && ele === activeEle){
       clearTimeout(timeOut);
     }
     
@@ -424,19 +424,19 @@ function CalendarApp(date) {
   CalendarApp.prototype.textOptionLimiter = function(options, input, format){
     if ( !input ) return '';
     
-    if ( input.indexOf(":") !== -1 && format == 'datetime' ) {
+    if ( input.indexOf(":") !== -1 && format === 'datetime' ) {
    
       var _splitTime = input.split(':', 2);
-      if (_splitTime.length == 2 && !_splitTime[1].trim()) return input;
+      if (_splitTime.length === 2 && !_splitTime[1].trim()) return input;
       var _trailingTime = parseInt(_splitTime[1]);
       /* Probably could be coded better -- a block to clean up trailing data */
       if (options.indexOf(_splitTime[0]) === -1) {
         return options[0];
       }
-      else if (_splitTime[1] == "0" ) {
+      else if (_splitTime[1] === "0" ) {
         return input;
       }
-      else if (_splitTime[1] == "00" ) {
+      else if (_splitTime[1] === "00" ) {
         return _splitTime[0] +  ":00";
       }
       else if (_trailingTime < 10 ) {
@@ -450,7 +450,7 @@ function CalendarApp(date) {
     if ((input.toString().length >= 3) ) {
       var pad = (input.toString().length - 4) * -1;
       var _hour, _min;
-      if (pad == 1) {
+      if (pad === 1) {
         _hour = input[0];
         _min = input[1] + input[2];
       } else {
