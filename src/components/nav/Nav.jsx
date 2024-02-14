@@ -1,7 +1,7 @@
 import React from 'react'
 import './nav.css'
 import {AiOutlineHome} from 'react-icons/ai'
-import { BiMessageSquareDetail} from 'react-icons/bi'
+import {BiBook, BiMessageSquareDetail} from 'react-icons/bi'
 import { SlCalender } from "react-icons/sl";
 import {GiGalaxy} from 'react-icons/gi'
 import { useState } from 'react'
