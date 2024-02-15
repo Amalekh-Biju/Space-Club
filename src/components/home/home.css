@@ -2,13 +2,9 @@
 
 
 html {
-
+  height: 100%;
   display: flex;
   flex-direction: column;
-}
-body{
-  height: 100% !important;
-  overflow: hidden; 
 }
 
 #stars {
@@ -63,11 +59,8 @@ body{
 }
 
 #title {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  position: fixed;
+
+  position: absolute;
   left: 0;
   right: 0;
   color: #FFF;
@@ -78,10 +71,11 @@ body{
   letter-spacing: 10px;
   padding-left: 10px;
   padding-top: 0;
-    top: 30%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-63%);
 }
 #title span {
-   margin-bottom: 10px;
   background: -webkit-linear-gradient(white, #38495a);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -103,13 +97,12 @@ body {
   user-select:none;/* for microsoft edge*/
 	display: flex;
 
-	height: 100%;
+	height: 100vh;
 	transition: all 0.4s ease-in-out;
 	flex-direction: column;
   background: #000000;
 }
-#title >div > .h1 {
-  font-size: 10rem;
+#title > h1 {
 	margin-bottom: 50px;
 	font-family: 'Roboto Mono', monospace;
 	font-family: 'Varela Round', sans-serif;
@@ -119,7 +112,7 @@ body {
 	background-size: 200% auto;
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
-	animation:1s cubic-bezier(0.075, 0.1, 0.78, 1) 0.1s backwards,
+	animation: movingBack 1s cubic-bezier(0.075, 0.1, 0.78, 1) 0.1s backwards,
 		changeBack 1s ease-in-out 1.7s;
 }
 @keyframes movingBack {

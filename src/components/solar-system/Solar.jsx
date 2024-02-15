@@ -4,7 +4,6 @@ import './solar.css';
 
 const Solar = () => {
   const solarHtml = `
-  <div class="mainsol">
   <h1 class='logo'>
   Solar explorer
   <span></span>
@@ -487,7 +486,6 @@ const Solar = () => {
   <p>For the 76 years between Pluto being discovered and the time it was reclassified as a dwarf planet it completed under a third of its orbit around the Sun.</p>
   <h2>Pluto has five known moons.</h2>
   <p>The moons are Charon (discovered in 1978,), Hydra and Nix (both discovered in 2005), Kerberos originally P4 (discovered 2011) and Styx originally P5 (discovered 2012) official designations S/2011 (134340) 1 and  S/2012 (134340) 1.</p>
-</div>
 </div>
 
   `;
