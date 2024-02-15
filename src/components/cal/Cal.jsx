@@ -1,10 +1,14 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import './cal.css'
-import './cal.js'
+import CalendarApp from  './cal.js'
 
 const Cal = () => {
+  useEffect(() => {
+   new CalendarApp();
+  },[])
   return (
     <div className="cal">
+      
         <div class="calendar" id="calendar-app">
   <div class="calendar--day-view" id="day-view">
     <span class="day-view-exit" id="day-view-exit">&times;</span>
