@@ -64,7 +64,7 @@ body{
 
 #title {
 
-  position: absolute;
+  position: fixed;
   left: 0;
   right: 0;
   color: #FFF;
@@ -116,7 +116,7 @@ body {
 	background-size: 200% auto;
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
-	animation: movingBack 1s cubic-bezier(0.075, 0.1, 0.78, 1) 0.1s backwards,
+	animation:1s cubic-bezier(0.075, 0.1, 0.78, 1) 0.1s backwards,
 		changeBack 1s ease-in-out 1.7s;
 }
 @keyframes movingBack {

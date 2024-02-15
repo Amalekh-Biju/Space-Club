@@ -1,6 +1,6 @@
 import React from 'react'
 import { ReactDOM } from 'react';
-import './home.module.css';
+import './home.css';
 import { Link } from 'react-router-dom';
 import { useState } from 'react'
 import '../nav/nav.css'

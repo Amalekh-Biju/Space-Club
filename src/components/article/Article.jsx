@@ -1,6 +1,6 @@
 import React from 'react'
 import Artcomp from './arti.jsx'
-import './article.css'
+import './article.module.css'
 const Article = () => {
 const art = [
   {
@@ -39,7 +39,7 @@ const art = [
 
   return (
  
-<div class="Home">
+<div class="artic">
 		 <div id='stars'></div>
 		<div id='stars2'></div>
 		<div id='stars3'></div>
