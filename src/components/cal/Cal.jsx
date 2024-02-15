@@ -1,12 +1,15 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import './cal.css'
-import './cal.js'
+import CalendarApp from  './cal.js'
 
 const Cal = () => {
+  useEffect(() => {
+   new CalendarApp();
+  },[])
   return (
     <div className="cal">
       
-        {/* <div class="calendar" id="calendar-app">
+        <div class="calendar" id="calendar-app">
   <div class="calendar--day-view" id="day-view">
     <span class="day-view-exit" id="day-view-exit">&times;</span>
     <span class="day-view-date" id="day-view-date">MAY 29 2016</span>
@@ -71,7 +74,7 @@ const Cal = () => {
   <div class="footer">
     <span><span id="footer-date" class="footer__link">Today is May 30</span></span>    
   </div>
-</div> */}
+</div>
     </div>
   )
 }
