@@ -26,4 +26,12 @@
     top: 20px;
   }
 
+  .loader{
+    z-index: -1;
+  }
+
+  .calen{
+    z-index: 10;
+   
+  }
 
