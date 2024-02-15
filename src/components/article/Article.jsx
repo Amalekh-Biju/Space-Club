@@ -28,12 +28,7 @@ const art = [
     url:'https://drive.google.com/file/d/13Z9qdKIJ8XaT88-SPS_p5uUsumVjM0RB/view?usp=drive_link'
   },
 
-  {
-    name:'Article 3',
-    author:'Author',
-    desc:' Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam in neque in purus dictum sodales in non lorem. Integer hendrerit feugiat massa accumsan commodo. Integer nisl erat, cursus at lorem non, rhoncus convallis sem.',
-    url:'../../files/art3.pdf'
-  },
+ 
 
 ] ;
 
