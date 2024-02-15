@@ -63,7 +63,10 @@ body{
 }
 
 #title {
-
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   position: fixed;
   left: 0;
   right: 0;
@@ -75,11 +78,10 @@ body{
   letter-spacing: 10px;
   padding-left: 10px;
   padding-top: 0;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-63%);
+    top: 30%;
 }
 #title span {
+   margin-bottom: 10px;
   background: -webkit-linear-gradient(white, #38495a);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -106,7 +108,8 @@ body {
 	flex-direction: column;
   background: #000000;
 }
-#title > h1 {
+#title >div > .h1 {
+  font-size: 10rem;
 	margin-bottom: 50px;
 	font-family: 'Roboto Mono', monospace;
 	font-family: 'Varela Round', sans-serif;
