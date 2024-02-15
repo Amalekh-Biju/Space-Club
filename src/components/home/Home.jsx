@@ -1,6 +1,6 @@
 import React from 'react'
 import { ReactDOM } from 'react';
-import './home.css';
+import './home.module.css';
 import { Link } from 'react-router-dom';
 import { useState } from 'react'
 import '../nav/nav.css'
@@ -18,7 +18,7 @@ const Home = () => {
 			Welcome To 
 			</span>
 			<br/><br/>
-			<h1>Space Club MITS</h1>
+			<h1>SIA MITS</h1>
 		</div>
 		<Link to="/solar" > <button>Solar Explorer</button></Link>
 	</div>
