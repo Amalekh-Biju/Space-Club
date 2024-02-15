@@ -7,7 +7,7 @@ import '../nav/nav.css'
 import { motion } from "framer-motion";
 const Home = () => {
 	// const text1= "S.p.a.c.e. .C.l.u.b".split(".");
-	const text2 = "S.I.A.&nbsp;.M.I.T.S".split(".");
+	const text2 = "S.I.A..M.I.T.S".split(".");
   const [activeNav, setActiveNav]= useState('/solar')
   return (
 	<div class="Home">
