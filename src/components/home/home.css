@@ -2,9 +2,13 @@
 
 
 html {
-  height: 100%;
+
   display: flex;
   flex-direction: column;
+}
+body{
+  height: 100% !important;
+  overflow: hidden; 
 }
 
 #stars {
@@ -59,8 +63,11 @@ html {
 }
 
 #title {
-
-  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
   left: 0;
   right: 0;
   color: #FFF;
@@ -71,11 +78,10 @@ html {
   letter-spacing: 10px;
   padding-left: 10px;
   padding-top: 0;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-63%);
+    top: 30%;
 }
 #title span {
+   margin-bottom: 10px;
   background: -webkit-linear-gradient(white, #38495a);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -97,12 +103,13 @@ body {
   user-select:none;/* for microsoft edge*/
 	display: flex;
 
-	height: 100vh;
+	height: 100%;
 	transition: all 0.4s ease-in-out;
 	flex-direction: column;
   background: #000000;
 }
-#title > h1 {
+#title >div > .h1 {
+  font-size: 10rem;
 	margin-bottom: 50px;
 	font-family: 'Roboto Mono', monospace;
 	font-family: 'Varela Round', sans-serif;
@@ -112,7 +119,7 @@ body {
 	background-size: 200% auto;
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
-	animation: movingBack 1s cubic-bezier(0.075, 0.1, 0.78, 1) 0.1s backwards,
+	animation:1s cubic-bezier(0.075, 0.1, 0.78, 1) 0.1s backwards,
 		changeBack 1s ease-in-out 1.7s;
 }
 @keyframes movingBack {

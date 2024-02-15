@@ -1,8 +1,8 @@
 import React from 'react'
 import './nav.css'
-import {AiOutlineHome, AiOutlineUser} from 'react-icons/ai'
+import {AiOutlineHome} from 'react-icons/ai'
 import {BiBook, BiMessageSquareDetail} from 'react-icons/bi'
-import {RiServiceLine} from 'react-icons/ri'
+import { SlCalender } from "react-icons/sl";
 import {GiGalaxy} from 'react-icons/gi'
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
@@ -12,8 +12,10 @@ const Nav = () => {
   return (
     <nav>
       <Link to="/" onClick={() => setActiveNav('/')} className={activeNav === '/' ? 'active' : ''}><AiOutlineHome className='icon'/> <p>Home</p></Link>
-      <Link to="/article" onClick={() => setActiveNav('/article')} className={activeNav === '/article' ? 'active' : ''}><AiOutlineUser className='icon'/><p>Articles</p></Link>
+      <Link to="/article" onClick={() => setActiveNav('/article')} className={activeNav === '/article' ? 'active' : ''}><BiMessageSquareDetail className='icon'/><p>Articles</p></Link>
       <Link to="/solar" onClick={() => setActiveNav('/solar')} className={activeNav === '/solar' ? 'active' : ''}> <GiGalaxy className="icon" /><p>Our Solar System</p></Link>
+
+      <Link to="/cal" onClick={() => setActiveNav('/cal')} className={activeNav === '/cal' ? 'active' : ''}><SlCalender className='icon'/> <p>Calender</p></Link>
 
 
     </nav>
