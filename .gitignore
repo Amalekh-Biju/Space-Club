@@ -1,1 +1,7 @@
 node_modules
+# Ignore idx config files
+.idx*
+idx.*
+.idx_metadata.json
+.envrc
+.envrc.*
