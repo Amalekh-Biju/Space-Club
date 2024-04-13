@@ -55,7 +55,7 @@ export default function Example() {
         <div className="md:grid md:grid-cols-2 md:divide-x md:divide-gray-200">
           <div className="md:pr-14 rounded-md border-black">
             <div className="flex items-center">
-              <h2 className="flex-auto font-semibol text-cyan-500">
+              <h2 className="flex-auto font-semibol text-cyan-600">
                 {format(firstDayCurrentMonth, 'MMMM yyyy')}
               </h2>
               <button
