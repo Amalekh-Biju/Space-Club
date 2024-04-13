@@ -1,100 +1,101 @@
-
-.box {
- 
-  margin: 4% ;
-  --clr-shadow__border: #d9a1ff;
-  --clr-text: #F6F4EB;
-  --clr-space: #5183d8;
-  --clr-space-gr: #131923;
-  --clr-star: #E9F8F9;
-  --size: 14px;
-  position: relative;
-
-  background-color: #131923;
-  border-radius:10px;
-  z-index: 1;
-  opacity: 90%;
-width: fit-content;
-
+@media screen and (min-width: 768px){
+  .box {
+    
+    margin: 4% ;
+    --clr-shadow__border: #d9a1ff;
+    --clr-text: #F6F4EB;
+    --clr-space: #5183d8;
+    --clr-space-gr: #131923;
+    --clr-star: #E9F8F9;
+    --size: 14px;
+    position: relative;
+    
+    background-color: #131923;
+    border-radius:10px;
+    z-index: 1;
+    opacity: 90%;
+    width: fit-content;
+    
+   
+     
+  }
+  .innerbox{
+    display: flex;
+    margin: 1%;
+  }
+  .button1 {
+    width:50rem;
+    font-size: calc(var(--size) + 20px);
+    background: transparent;
+    letter-spacing: 0.3rem;
+    margin: 2%  ;
+    font-family: 'Roboto', sans-serif;
+    color: var(--clr-text);
+    
+  }
   
-}
-.innerbox{
-  display: flex;
-  margin: 1%;
-}
-.button1 {
-  width:50rem;
-  font-size: calc(var(--size) + 20px);
-  background: transparent;
-  letter-spacing: 0.3rem;
-  margin: 2%  ;
-  font-family: 'Roboto', sans-serif;
-  color: var(--clr-text);
   
-}
-
-
-.author {
+  .author {
+    
+    font-size:  calc(var(--size) + 10px);
+    font-family: 'Roboto', sans-serif;
+    background: transparent;
+    letter-spacing: 0.2rem;
+    margin: 4%;
+    
+    color: var(--clr-text);
+    
+  }
+  .desc {
+    font-size: (--size);
+    font-family: 'Roboto', sans-serif;
+    background: transparent;
+    letter-spacing: 0.2rem;
+    margin: 4%;
+    border: none;
+    cursor: pointer;
+    color: var(--clr-text);
+    
+  }
+  .space {
+    width: 100%;
+    height: 100%;
+    background: #131923;
+    bottom: 0%;
+    gap: 1.5rem;
+    transition: 0.5s ease-in-out;
+    z-index: -1;
+    opacity: 0;
+    overflow: hidden;
+    position: absolute;
+    display: flex;
+    background: linear-gradient( 160deg, var(--clr-space), var(--clr-space-gr));
+  }
   
-  font-size:  calc(var(--size) + 10px);
-  font-family: 'Roboto', sans-serif;
-  background: transparent;
-  letter-spacing: 0.2rem;
-  margin: 4%;
   
-  color: var(--clr-text);
+  .box:hover .space {
+    
+    opacity: 1;
+    
+  }
   
-}
-.desc {
-  font-size: (--size);
-  font-family: 'Roboto', sans-serif;
-  background: transparent;
-  letter-spacing: 0.2rem;
-  margin: 4%;
-  border: none;
-  cursor: pointer;
-  color: var(--clr-text);
   
-}
-.space {
-  width: 100%;
-  height: 100%;
-  background: #131923;
-  bottom: 0%;
-  gap: 1.5rem;
-  transition: 0.5s ease-in-out;
-  z-index: -1;
-  opacity: 0;
-  overflow: hidden;
-  position: absolute;
-  display: flex;
-  background: linear-gradient( 160deg, var(--clr-space), var(--clr-space-gr));
-}
-
-
-.box:hover .space {
- 
-  opacity: 1;
-  
-}
-
-  
-.star {
-  height: 4rem;
-  width: 0.3rem;
-  transition: 0.5s;
-  border-radius: 50px;
-  clip-path: polygon(50% 0%, 100% 100%, 0% 100%);
-  position: relative;
-  background-color: var(--clr-star);
-  animation: space-animation calc(0.1s * var(--i)) linear infinite;
-}
+  .star {
+    height: 4rem;
+    width: 0.3rem;
+    transition: 0.5s;
+    border-radius: 50px;
+    clip-path: polygon(50% 0%, 100% 100%, 0% 100%);
+    position: relative;
+    background-color: var(--clr-star);
+    animation: space-animation calc(0.1s * var(--i)) linear infinite;
+  }
   
   @keyframes space-animation {
     0% {
       transform: rotate(-30deg) translateY(calc(-52% * var(--i)));
     }
-  
+    
     100% {
       transform: rotate(-30deg) translateY(calc(52% * var(--i)));
     }
@@ -103,7 +104,7 @@ width: fit-content;
   
   
   .Btn1{
-   
+    
     display: flex;
     align-items: flex-end;
     justify-content: flex-end;
@@ -120,7 +121,7 @@ width: fit-content;
     display: flex;
     flex-direction: column;
     align-items: center;
-
+    
     justify-content: center;
     cursor: crosshair;
     position: relative;
@@ -160,10 +161,11 @@ width: fit-content;
       transform: translateY(-10px);
       opacity: 0;
     }
-  
+    
     100% {
       transform: translateY(0px);
       opacity: 1;
     }
   }
+}
   
