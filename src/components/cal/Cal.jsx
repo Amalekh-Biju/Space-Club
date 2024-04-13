@@ -18,7 +18,7 @@ import {
 } from 'date-fns'
 import { Fragment, useState } from 'react'
 import events from './events.json'
-import './Cal.css'
+import './cal.css'
 
 
 function classNames(...classes) {
