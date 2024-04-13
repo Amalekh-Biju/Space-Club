@@ -4,14 +4,6 @@ import './article.module.css'
 const Article = () => {
 const art = [
   {
- // UNLOCKING THE SECRETS OF CORONAL HOLES: UNDERSTANDING THEIR INFLUENCE ON EARTH'S SPACE WEATHER
-
-    // Author- Arsha R Kumar
-    
-    // This article contains the secrets of 
-    // coronal holes, shedding light on their captivating features and their impact on Earth's space weather.
-
-   
 
 
     name:'UNLOCKING THE SECRETS OF CORONAL HOLES:',
@@ -39,7 +31,7 @@ const art = [
 		<div id='stars2'></div>
 		<div id='stars3'></div>
 		
-<div className='new'>
+<div className='new '>
 
     {art.map((value,index) => (
   <Artcomp key={index} name={value.name} pesc={value.pesc} desc={value.desc} author={value.author} url={value.url} />
